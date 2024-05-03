@@ -24,7 +24,7 @@
             </div>
         </div>
         <div v-else>
-            <p>You don't have notes now.  <RouterLink :to="'/create-note'">Create new on here</RouterLink></p>
+            <p>You don't have notes now.  <RouterLink :to="'/create-note'">Create new one here</RouterLink></p>
         </div>
     </div>
 </template>
