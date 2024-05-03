@@ -1,0 +1,24 @@
+@import './base.css';
+@import './note.scss';
+@import './form.scss';
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-weight: normal;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: #135D66;
+  transition: 0.2s;
+  padding: 3px;
+}
+
+@media (hover: hover) {
+  a:hover {
+    color: #003C43;
+  }
+}

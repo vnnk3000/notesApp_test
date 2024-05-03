@@ -1,0 +1,114 @@
+@import './variables.scss';
+
+.form {
+    &__field {
+        position: relative;
+        margin: 20px 0;
+        p{
+            padding: 0 0 20px;
+            font-size: 20px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 16px;
+            background-color: $background;
+            outline: transparent;
+            transition: outline .2s linear;
+            &:focus {
+                outline: 1px solid $mainColor;
+            }
+        }
+        textarea {
+            resize: none;
+            height: 300px;
+        }
+        &.error {
+            input,
+            textarea {
+                outline: 1px solid $errorColor;
+            }
+            .form__error {
+                display: block;
+                font-size: 12px;
+            }
+        }
+    }
+    &__button {
+        padding: 10px 30px;
+        font-size: 24px;
+        background-color: $background;
+        border-radius: 5px;
+        color: $textColor;
+        transition: all .2s ease-out;
+
+        &:hover {
+            color: $textColorLight;
+            background-color: $mainColor;
+        }
+    }
+
+    &__error {
+        display: none;
+        position: absolute;
+        color: $errorColor;
+    }
+}
+
+
+select {
+
+    /* styling */
+    background-color: white;
+    border: thin solid $secondaryColor;
+    border-radius: 4px;
+    display: inline-block;
+    font: inherit;
+    line-height: 1.5em;
+    padding: 0.5em 3.5em 0.5em 1em;
+  
+    /* reset */
+  
+    margin: 0;      
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    background-image:
+      linear-gradient(45deg, transparent 50%, white 50%),
+      linear-gradient(135deg, white 50%, transparent 50%),
+      linear-gradient(to right, skyblue, skyblue);
+    background-position:
+      calc(100% - 20px) calc(1em + 2px),
+      calc(100% - 15px) calc(1em + 2px),
+      100% 0;
+    background-size:
+      5px 5px,
+      5px 5px,
+      2.5em 2.5em;
+    background-repeat: no-repeat;
+  }
+  
+  select:focus {
+    background-image:
+      linear-gradient(45deg, white 50%, transparent 50%),
+      linear-gradient(135deg, transparent 50%, white 50%),
+      linear-gradient(to right, $secondaryColor, $secondaryColor);
+    background-position:
+      calc(100% - 15px) 1em,
+      calc(100% - 20px) 1em,
+      100% 0;
+    background-size:
+      5px 5px,
+      5px 5px,
+      2.5em 2.5em;
+    background-repeat: no-repeat;
+    border-color: grey;
+    outline: 0;
+  }
+  

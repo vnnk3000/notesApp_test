@@ -1,0 +1,120 @@
+@import './variables.scss';
+
+.notes {
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 5%;
+    }
+    &__sort {
+        padding-bottom: 20px;
+        text-align: right;
+    }
+    &__sort-button {
+        &:hover {
+            text-decoration: underline;
+        }
+        &.active {
+            text-decoration: underline;
+        }
+    }
+}
+
+.note {
+    border-radius: 10px;
+    background-color: $background;
+    box-shadow: 5px 5px 5px $mainColor;
+
+    &__editor {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        padding: 10px 20px;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    &__title {
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 1;
+        color: $mainColor;
+        text-decoration: underline;
+    }
+
+    &__text {
+        color: $textColor;
+    }
+
+    &__date {
+        text-wrap: nowrap;
+        font-style: italic;
+        color: $textColorLight;
+    }
+
+    &__body {
+        height: 100%;
+        padding: 20px 0; 
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: flex-end;
+    }
+    &__button {
+        width: 30px;
+        height: 30px;
+        margin-left: 10px;
+        padding: 7px;
+        background-color: $mainColor;
+        border-radius: 50%;
+        transition: background-color .2s ease-out;
+
+        &:hover {
+            background-color: $secondaryColor; 
+        }
+        svg {
+            fill: $white;
+            stroke: $white;
+            &.active {
+                fill: $active;
+                stroke: $active
+            }
+        }
+    }
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__category {
+        display: inline-block;
+        width: 100%;
+        text-align: right;
+        color: $secondaryColor;
+    }
+
+    &--add {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 150px;
+        a {
+            display: inline-block;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+    }
+}
